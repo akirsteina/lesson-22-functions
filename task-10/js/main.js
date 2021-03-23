@@ -1,7 +1,7 @@
 function identityMatrix(num){
-    
-for (let i=0; i<=num; i++){
     let array =[];
+for (let i=0; i<=num; i++){
+    
     let row = [];
     for (let j=0; j<=num; j++){
         
@@ -13,7 +13,13 @@ for (let i=0; i<=num; i++){
     }
     array.push(row);
 }
-console.log(array);
+displayMatrix(array);
 }
 
-console.log(identityMatrix(3));
+function displayMatrix(item){
+    for (i in item) {
+        console.log(item[i].join(' '));
+    }
+}
+
+console.log(identityMatrix(6));

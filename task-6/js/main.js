@@ -5,10 +5,8 @@
 function longestWord(phrase) {
     let splitPhrase = phrase.split(' ');
     let longestWord = '';
-    let longestWordValue = 0;
     for (let i = 0; i < splitPhrase.length; i++) {
-        if (splitPhrase[i].length > longestWordValue) {
-            longestWordValue = splitPhrase[i].length;
+        if (splitPhrase[i].length > longestWord.length) {
             longestWord = splitPhrase[i];
         }
     }
@@ -24,12 +22,17 @@ function longestWord3(phrase) {
     return longWord[0];
 }
 
-// function longestWord3(phrase) {
-//     let longWord = phrase.split(' ').sort(longestWord2());
+
+// should work somewhat like this, according to Jānis
+
+// function longestWord4(phrase) {
+//     let longWord = phrase.split(' ').sort(longestWord2);
 //     return longWord[0];
 // }
-// function longestWord2(a, b) {
+// function longestWord2() {
 //     return b.length - a.length;
 // }
+
+
 
 console.log(longestWord3('Web Development Tutorial'));
